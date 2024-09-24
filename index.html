@@ -21,15 +21,23 @@
             max-width: 50%;
             height: auto;
         }
-        h1, a {
+        h1 {
             text-align: center;
+        }
+        /* Butonları yan yana yerleştirmek için div */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Butonlar arasındaki boşluk */
+            margin-top: 20px;
         }
         a {
             background-color: coral;
             color: bisque;
-            padding: 10px;
+            padding: 10px 15px; /* Sağ ve sol padding ekledik */
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s; /* Hover animasyonu */
         }
         a:hover {
             background-color: #ff7f50;
@@ -65,7 +73,14 @@
     <br>
     <iframe src="https://discord.com/widget?id=972672593826037770&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     <br>
-    <a href="https://discord.gg/vvl">Discord Sunucumuza Katılın</a> <a href="https://www.instagram.com//">Instagram Hesabım</a> <a href="https://www.twitch.tv/arcooty">Twitch Hesabım</a>
+    
+    <!-- Butonların yer aldığı div -->
+    <div class="button-container">
+        <a href="https://discord.gg/vvl">Discord Sunucumuza Katılın</a>
+        <a href="https://www.instagram.com//">Instagram Hesabım</a>
+        <a href="https://www.twitch.tv/arcooty">Twitch Hesabım</a>
+    </div>
+    
     <br><br>
 </body>
 </html>
