@@ -3,38 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml"
-        href="https://cdn.discordapp.com/attachments/1287962169039654932/1289241791023026279/arcootyicon-67fb548c.svg">
+    <link rel="icon" type="image/svg+xml" href="https://cdn.discordapp.com/attachments/1287962169039654932/1289241791023026279/arcootyicon-67fb548c.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="arcooty">
     <meta property="og:url" content="http://sekerle.me">
     <meta property="og:description" content="Arcooty's personal website.">
     <title>A R C O O T Y</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+        @import "https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap";
+        @import "https://fonts.googleapis.com/css2?family=Fondamento&display=swap";
 
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Cinzel Decorative', cursive;
+            font-family: Cinzel Decorative, cursive;
             user-select: none;
         }
 
         h1 {
-            font-family: 'Fondamento', cursive;
+            font-family: Fondamento, cursive;
         }
 
         @keyframes sizechange {
             0% {
                 transform: scale(1);
             }
-
             50% {
                 transform: scale(1.2);
             }
-
             to {
                 transform: scale(1);
             }
@@ -44,81 +40,88 @@
             0% {
                 color: #dc143c;
             }
-
             50% {
                 color: red;
             }
-
             to {
                 color: #dc143c;
             }
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url(https://cdn.discordapp.com/attachments/1287962169039654932/1289240739489906781/reaperbackground-5f8b5c9d.jpg?ex=66f96c01&is=66f81a81&hm=d1d9dcf361f21249fa3ff7af6d8673cde5e187f0061b553df73f443069967689&);
-            background-position: center;
-            background-size: cover;
+        #counter {
+            animation-name: none;
+            visibility: auto;
+            width: 100%;
+            cursor: pointer;
+            transition: .5s;
+            font-size: 50px;
+            color: #dd1c1f;
+            filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
         }
 
-        .nav,
-        .nav2 {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.57);
-            height: 5px;
+        .textsymbol {
+            animation-name: colorchange;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            margin-bottom: 20px;
+            transform: scale(2);
         }
 
         .nav {
-            border-bottom: 5px solid crimson;
+            height: .5em;
+            width: 100%;
+            background-color: #00000091;
+            border-bottom: 5px solid crimson
         }
 
         .nav2 {
-            border-top: 5px solid crimson;
+            height: .5em;
+            width: 100%;
+            background-color: #00000091;
+            border-top: 5px solid crimson
         }
 
-        .blackscreen {
-            max-width: 1000px;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.52);
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid crimson;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        .all {
+            overflow: hidden;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(https://cdn.discordapp.com/attachments/1287962169039654932/1289240739489906781/reaperbackground-5f8b5c9d.jpg?ex=66f96c01&is=66f81a81&hm=d1d9dcf361f21249fa3ff7af6d8673cde5e187f0061b553df73f443069967689&);
+            background-position: center;
+            background-size: cover;
+            justify-content: center;
+            flex-direction: column;
             text-align: center;
         }
 
-        #pfp {
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            border: 3px solid crimson;
-            transition: all 0.3s ease;
-            object-fit: cover;
-            margin-bottom: 20px;
+        .main {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
         }
 
-        #pfp:hover {
-            height: 170px;
-            width: 170px;
-            border-radius: 50%;
-            border-color: #ff0033;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+        small {
+            animation-name: colorchange;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            color: #e6122e;
         }
 
         .text {
-            font-size: 60px;
-            color: #dd1c1f;
-            letter-spacing: 5px;
-            filter: drop-shadow(2px 2px 5px black);
+            animation-name: sizechange;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            width: 100%;
+            letter-spacing: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            animation: sizechange 4s infinite;
+            transition: .5s;
+            font-size: 100px;
+            color: #dd1c1f;
+            filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
         }
 
         .text:hover {
@@ -126,113 +129,163 @@
             filter: drop-shadow(2px 2px 10px rgb(168, 28, 28));
         }
 
-        .textsymbol {
-            animation: colorchange 2s infinite;
-            margin-bottom: 20px;
-        }
-
         .socials {
+            margin-bottom: 100px;
+            transition: 1s;
+            filter: drop-shadow(2px 2px 5px rgba(255, 0, 0, .315));
+            gap: 40px;
+            list-style: none;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            list-style: none;
+            flex-direction: row;
+            margin-top: 2em;
         }
 
-        .socials a svg {
-            width: 30px;
-            height: 30px;
-            padding: 5px;
-            border-radius: 50%;
-            transition: transform 0.3s, border 0.3s;
+        #steam {
+            height: 23px;
+            width: 23px;
+            padding: 6px;
         }
 
-        .socials a:hover svg {
+        .socials>#left, .socials>#right {
             transform: scale(1.3);
-            border: 2px solid crimson;
+            animation-name: colorchange;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            color: #e6122e;
+            display: inline-block;
+            transition: 1s;
         }
 
-        #left,
-        #right {
-            animation: colorchange 2s infinite;
+        .socials>#left {
+            margin-right: 40px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .text {
-                font-size: 40px;
-            }
-
-            #pfp {
-                height: 120px;
-                width: 120px;
-            }
-
-            .socials {
-                gap: 10px;
-            }
-
-            .socials a svg {
-                width: 25px;
-                height: 25px;
-            }
+        .socials>#right {
+            margin-left: 40px;
         }
 
-        @media (max-width: 480px) {
-            .text {
-                font-size: 30px;
-            }
+        .socials h1 {
+            color: #ff002b;
+        }
 
-            #pfp {
-                height: 100px;
-                width: 100px;
-            }
+        a svg {
+            width: 28px;
+            height: 28px;
+            background-color: #00000062;
+            border: solid 1px crimson;
+            border-radius: 50%;
+            padding: 4px;
+            display: inline-block;
+            transition: .1s;
+            transform: scale(1.6);
+        }
 
-            .socials {
-                gap: 5px;
-            }
+        a svg:hover {
+            border: solid 2px crimson;
+            fill: #000;
+            transform: scale(1.9);
+        }
 
-            .socials a svg {
-                width: 20px;
-                height: 20px;
-            }
+        #pfp {
+            flex-shrink: 0;
+            transition: .5s;
+            margin: 10px auto;
+            height: 200px;
+            width: 200px;
+            border-radius: 30%;
+            border: solid 2px crimson;
+            filter: drop-shadow(1px 1px 15px rgb(172, 0, 29));
+        }
+
+        #pfp:hover {
+            transition: .8s;
+            height: 250px;
+            width: 250px;
+            border-radius: 45%;
+            border: solid 2px crimson;
+            filter: drop-shadow(1px 1px 20px rgb(255, 0, 51));
+            cursor: pointer;
+        }
+
+        .blackscreen {
+            border-radius: 5%;
+            border: 3px solid crimson;
+            margin: auto;
+            background-color: #00000086;
+            display: flex;
+            height: 90%;
+            width: 50%;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="all">
-        <div class="nav"></div>
-        <div class="main">
-            <div class="blackscreen">
-                <img id="pfp"
-                    src="https://cdn.discordapp.com/avatars/346398686403624961/0cf010af274ce89dd4a34f485a5468be.webp?size=1024&animated=true&width=0&height=293"
-                    alt="Profile Picture">
-                <b class="text">
-                    <svg class="textsymbol" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="m16.15 14.4l2.56 7.86L12 17.4l-6.72 4.9l2.57-7.93l-6.7-4.87h8.29L12 1.61l2.56 7.89h8.33l-6.74 4.9m-2.85 2.07l2.56 1.86l-.98-3.01l-1.58 1.15M11 9.5h2l-1-3.03l-1 3.03m-.26 6.97L9.13 15.3l-1 3.07l2.61-1.9M18.28 11h-3.23l.62 1.9l2.61-1.9m-7.75 0l-.91 2.8L12 15.54l2.39-1.72l-.92-2.82h-2.94m-4.77 0l2.58 1.87l.61-1.87H5.76Z" />
-                    </svg>
-                    ARCOOTY
-                    <svg class="textsymbol" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="m16.15 14.4l2.56 7.86L12 17.4l-6.72 4.9l2.57-7.93l-6.7-4.87h8.29L12 1.61l2.56 7.89h8.33l-6.74 4.9m-2.85 2.07l2.56 1.86l-.98-3.01l-1.58 1.15M11 9.5h2l-1-3.03l-1 3.03m-.26 6.97L9.13 15.3l-1 3.07l2.61-1.9M18.28 11h-3.23l.62 1.9l2.61-1.9m-7.75 0l-.91 2.8L12 15.54l2.39-1.72l-.92-2.82h-2.94m-4.77 0l2.58 1.87l.61-1.87H5.76Z" />
-                    </svg>
-                </b>
-                <ul class="socials">
-                    <li>
-                        <a href="https://www.instagram.com/sekerle.me/">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-                                <path fill="white"
-                                    d="M512 380.8c-72.6 0-131.2 58.6-131.2 131.2s58.6 131.2 131.2 131.2 131.2-58.6 131.2-131.2-58.6-131.2-131.2-131.2m0 340c-115.2 0-208.8-93.6-208.8-208.8S396.8 303.2 512 303.2 720.8 396.8 720.8 512 627.2 720.8 512 720.8m203.4-373.6c0 26.2-21.2 47.4-47.4 47.4-26.2 0-47.4-21.2-47.4-47.4 0-26.2 21.2-47.4 47.4-47.4 26.2-.1 47.4 21.2 47.4 47.4m111.8 47.6c-2.6-55.6-15-104.8-55-144.8s-89.2-52.4-144.8-55c-57.2-3.2-228.8-3.2-286 0-55.6 2.6-104.8 15-144.8 55s-52.4 89.2-55 144.8c-3.2 57.2-3.2 228.8 0 286 2.6 55.6 15 104.8 55 144.8s89.2 52.4 144.8 55c57.2 3.2 228.8 3.2 286 0 55.6-2.6 104.8-15 144.8-55s52.4-89.2 55-144.8c3.2-57.2 3.2-228.8 0-286m-75 347.8c-18.8 47.6-55.8 84.6-103.4 103.4-71.6 28.4-241.6 21.8-322.4 21.8s-250.8 6.4-322.4-21.8c-47.6-18.8-84.6-55.8-103.4-103.4-28.4-71.6-21.8-241.6-21.8-322.4s-6.4-250.8 21.8-322.4c18.8-47.6 55.8-84.6 103.4-103.4 71.6-28.4 241.6-21.8 322.4-21.8s250.8-6.4 322.4 21.8c47.6 18.8 84.6 55.8 103.4 103.4 28.4 71.6 21.8 241.6 21.8 322.4s6.6 250.8-21.8 322.4" />
-                            </svg>
-                        </a>
-                    </li>
-                    <!-- Diğer sosyal medya simgelerini de ekleyebilirsiniz -->
-                </ul>
+    <div id="app" data-v-app="">
+        <div class="all">
+            <div class="nav"></div>
+            <div class="main">
+                <div class="blackscreen">
+                    <img id="pfp" src="https://cdn.discordapp.com/avatars/346398686403624961/0cf010af274ce89dd4a34f485a5468be.webp?size=1024&animated=true&width=0&height=293">
+                    <b class="text">
+                        <svg class="textsymbol" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="m16.15 14.4l2.56 7.86L12 17.4l-6.72 4.9l2.57-7.93l-6.7-4.87h8.29L12 1.61l2.56 7.89h8.33l-6.74 4.9m-2.85 2.07l2.56 1.86l-.98-3.01l-1.58 1.15M11 9.5h2l-1-3.03l-1 3.03m-.26 6.97L9.13 15.3l-1 3.07l2.61-1.9M18.28 11h-3.23l.62 1.9l2.61-1.9m-7.75 0l-.91 2.8L12 15.54l2.39-1.72l-.92-2.82h-2.94m-4.77 0l2.58 1.87l.61-1.87H5.76Z"></path>
+                        </svg>
+                        ARCOOTY
+                        <svg class="textsymbol" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="m16.15 14.4l2.56 7.86L12 17.4l-6.72 4.9l2.57-7.93l-6.7-4.87h8.29L12 1.61l2.56 7.89h8.33l-6.74 4.9m-2.85 2.07l2.56 1.86l-.98-3.01l-1.58 1.15M11 9.5h2l-1-3.03l-1 3.03m-.26 6.97L9.13 15.3l-1 3.07l2.61-1.9M18.28 11h-3.23l.62 1.9l2.61-1.9m-7.75 0l-.91 2.8L12 15.54l2.39-1.72l-.92-2.82h-2.94m-4.77 0l2.58 1.87l.61-1.87H5.76Z"></path>
+                        </svg>
+                    </b>
+                    <div class="socials">
+                        <h1 id="left">↪</h1>
+                        <div>
+                            <a href="https://www.youtube.com/@arcooty" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                                    <path fill="#FF0000" d="M234.3 69.8a23.5 23.5 0 0 0-14.5-16.3C185.6 40.3 131 40.4 128 40.4s-57.6-.1-91.8 13.1a23.5 23.5 0 0 0-14.5 16.3C19.1 79.7 16 97.9 16 128s3.1 48.3 5.7 58.2a23.5 23.5 0 0 0 14.5 16.3c32.8 12.7 84.2 13.1 91.1 13.1h1.4c6.9 0 58.3-.4 91.1-13.1a23.5 23.5 0 0 0 14.5-16.3c2.6-9.9 5.7-28.1 5.7-58.2s-3.1-48.3-5.7-58.2Zm-72.1 61.5l-48 32a3.6 3.6 0 0 1-2.2.7a4.5 4.5 0 0 1-1.9-.5a3.9 3.9 0 0 1-2.1-3.5V96a3.9 3.9 0 0 1 2.1-3.5a4 4 0 0 1 4.1.2l48 32a3.9 3.9 0 0 1 0 6.6Z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://instagram.com/lakidekante" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                                    <path fill="#F77737" d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://open.spotify.com/playlist/3Kjfi6hCZzrgRAucj5F8yS?si=b83652b1a1a94fff" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="#1DB954" d="M17.9 10.9C14.7 9 9.35 8.8 6.3 9.75c-.5.15-1-.15-1.15-.6c-.15-.5.15-1 .6-1.15c3.55-1.05 9.4-.85 13.1 1.35c.45.25.6.85.35 1.3c-.25.35-.85.5-1.3.25m-.1 2.8c-.25.35-.7.5-1.05.25c-2.7-1.65-6.8-2.15-9.95-1.15c-.4.1-.85-.1-.95-.5c-.1-.4.1-.85.5-.95c3.65-1.1 8.15-.55 11.25 1.35c.3.15.45.65.2 1m-1.2 2.75c-.2.3-.55.4-.85.2c-2.35-1.45-5.3-1.75-8.8-.95c-.35.1-.65-.15-.75-.45c-.1-.35.15-.65.45-.75c3.8-.85 7.1-.5 9.7 1.1c.35.15.4.55.25.85M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/axstin/rbxfpsunlocker" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="white" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://steamcommunity.com/id/lakidekante/" target="_blank">
+                                <svg id="steam" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                                    <g fill="#2a475e">
+                                        <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006l4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844l-.001-.04a3.046 3.046 0 0 1 3.042-3.043a3.046 3.046 0 0 1 3.042 3.043a3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11a2.217 2.217 0 0 1-1.312-1.568L.33 10.333Z"></path>
+                                        <path d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165a1.705 1.705 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029a2.03 2.03 0 0 0 2.027-2.029a2.03 2.03 0 0 0-2.027-2.027a2.03 2.03 0 0 0-2.027 2.027Zm2.03-1.527a1.524 1.524 0 1 1-.002 3.048a1.524 1.524 0 0 1 .002-3.048Z"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <h1 id="right">↩</h1>
+                    </div>
+                </div>
             </div>
+            <div class="nav2"></div>
         </div>
-        <div class="nav2"></div>
     </div>
 </body>
 
