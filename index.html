@@ -28,9 +28,11 @@
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             to {
                 transform: scale(1);
             }
@@ -40,9 +42,11 @@
             0% {
                 color: #dc143c;
             }
+
             50% {
                 color: red;
             }
+
             to {
                 color: #dc143c;
             }
@@ -147,7 +151,8 @@
             padding: 6px;
         }
 
-        .socials>#left, .socials>#right {
+        .socials>#left,
+        .socials>#right {
             transform: scale(1.3);
             animation-name: colorchange;
             animation-duration: 2s;
@@ -221,58 +226,71 @@
             gap: 30px;
             text-align: center;
         }
-/* Tablet ekranlar için */
-@media (max-width: 768px) {
-    .text {
-        font-size: 70px; /* Tablet ekran boyutu */
-        letter-spacing: 5px; /* Daha dar harf aralığı */
-    }
-}
 
-/* Telefon ekranları için */
-@media (max-width: 480px) {
-    .text {
-        font-size: 40px; /* Telefon ekran boyutu */
-        letter-spacing: 3px; /* Daha dar harf aralığı */
-    }
-}
-        /* Mobil ekranlar için */
-@media (max-width: 768px) {
-    .blackscreen {
-        width: 80%;
-        height: 70%;
-    }
-}
-
-@media (max-width: 480px) {
-    .blackscreen {
-        width: 90%;
-        height: 60%;
-    }
-}
         /* Tablet ekranlar için */
-@media (max-width: 768px) {
-    .textsymbol {
-        margin-bottom: 10px; /* Yıldızların daha yakın olması için */
-    }
+        @media (max-width: 768px) {
+            .text {
+                font-size: 70px;
+                /* Tablet ekran boyutu */
+                letter-spacing: 5px;
+                /* Daha dar harf aralığı */
+            }
+        }
 
-    .socials {
-        margin-bottom: 50px; /* İkonların kutuya daha yakın olması için */
-        gap: 20px; /* İkonların aralığını azaltma */
-    }
-}
+        /* Telefon ekranları için */
+        @media (max-width: 480px) {
+            .text {
+                font-size: 40px;
+                /* Telefon ekran boyutu */
+                letter-spacing: 3px;
+                /* Daha dar harf aralığı */
+            }
+        }
 
-/* Telefon ekranları için */
-@media (max-width: 480px) {
-    .textsymbol {
-        margin-bottom: 5px; /* Yıldızları daha yakınlaştır */
-    }
+        /* Mobil ekranlar için */
+        @media (max-width: 768px) {
+            .blackscreen {
+                width: 80%;
+                height: 70%;
+            }
+        }
 
-    .socials {
-        margin-bottom: 50px; /* İkonların daha aşağıda durması için */
-        gap: 45px; /* İkonların arasındaki boşluğu azaltma */
-    }
-}
+        @media (max-width: 480px) {
+            .blackscreen {
+                width: 90%;
+                height: 60%;
+            }
+        }
+
+        /* Tablet ekranlar için */
+        @media (max-width: 768px) {
+            .textsymbol {
+                margin-bottom: 10px;
+                /* Yıldızların daha yakın olması için */
+            }
+
+            .socials {
+                margin-bottom: 50px;
+                /* İkonların kutuya daha yakın olması için */
+                gap: 20px;
+                /* İkonların aralığını azaltma */
+            }
+        }
+
+        /* Telefon ekranları için */
+        @media (max-width: 480px) {
+            .textsymbol {
+                margin-bottom: 5px;
+                /* Yıldızları daha yakınlaştır */
+            }
+
+            .socials {
+                margin-bottom: 50px;
+                /* İkonların daha aşağıda durması için */
+                gap: 45px;
+                /* İkonların arasındaki boşluğu azaltma */
+            }
+        }
     </style>
 </head>
 
