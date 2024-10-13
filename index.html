@@ -227,95 +227,69 @@
             text-align: center;
         }
 
-        /* Tablet ekranlar için */
-        @media (max-width: 768px) {
-            .text {
-                font-size: 70px;
-                /* Tablet ekran boyutu */
-                letter-spacing: 5px;
-                /* Daha dar harf aralığı */
-            }
-        }
-
-        /* Telefon ekranları için */
+        /* Telefon ekranları (480px ve altı) */
         @media (max-width: 480px) {
             .text {
                 font-size: 40px;
-                /* Telefon ekran boyutu */
                 letter-spacing: 3px;
-                /* Daha dar harf aralığı */
             }
-        }
 
-        /* Mobil ekranlar için */
-        @media (max-width: 768px) {
-            .blackscreen {
-                width: 80%;
-                height: 70%;
-            }
-        }
-
-        @media (max-width: 480px) {
             .blackscreen {
                 width: 90%;
                 height: 60%;
             }
-        }
 
-        /* Tablet ekranlar için */
-        @media (max-width: 768px) {
-            .textsymbol {
-                margin-bottom: 10px;
-                /* Yıldızların daha yakın olması için */
-            }
-
-            .socials {
-                margin-bottom: 50px;
-                /* İkonların kutuya daha yakın olması için */
-                gap: 20px;
-                /* İkonların aralığını azaltma */
-            }
-        }
-
-        /* Telefon ekranları için */
-        @media (max-width: 480px) {
             .textsymbol {
                 margin-bottom: 5px;
-                /* Yıldızları daha yakınlaştır */
             }
 
             .socials {
                 margin-bottom: 70px;
-                /* İkonların daha aşağıda durması için */
-                gap: 35px;
-                /* İkonların arasındaki boşluğu azaltma */
+                gap: 15px;
             }
         }
 
-        @media (max-width: 1024px) {
+        /* Küçük Tablet ekranları (481px - 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
             .text {
-                font-size: 60px;
-                /* Arcooty yazısını küçültme */
+                font-size: 70px;
+                letter-spacing: 5px;
+            }
+
+            .blackscreen {
+                width: 80%;
+                height: 70%;
             }
 
             .textsymbol {
                 margin-bottom: 10px;
-                /* Yıldızları biraz yaklaştır */
-                transform: scale(1.5);
-                /* Yıldızların boyutunu küçültme */
             }
 
             .socials {
-                margin-bottom: -30px; /* İkonları kutuya yaklaştır */
-                gap: 35px;
-                /* İkonların arasını daraltma */
+                margin-bottom: 50px;
+                gap: 20px;
+            }
+        }
+
+        /* Büyük Tablet ekranları (769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .text {
+                font-size: 60px;
             }
 
             .blackscreen {
                 width: 70%;
-                /* Kutuyu daha geniş yapmak için */
-                height: 60%;
-                /* Kutunun yüksekliğini ayarlama */
+                height: 80%;
+            }
+
+            .textsymbol {
+                margin-bottom: 10px;
+                transform: scale(1.5);
+            }
+
+            .socials {
+                margin-bottom: 30px;
+                gap: 30px;
             }
         }
     </style>
